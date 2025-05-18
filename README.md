@@ -5,10 +5,6 @@ Build a fully functional web application.
 Apply HTML, CSS, and JavaScript concepts learned.
 Deploy the project using GitHub Pages, Netlify, or Vercel.
 
-## Instructions
-Choose one of the following project ideas:
-Blog Website: Implement a multi-page site with navigation.
-Ecommerce Website: Implement a multi-page site with navigation.
 
 >[!NOTE]
 > - Include at least:
@@ -16,10 +12,8 @@ Ecommerce Website: Implement a multi-page site with navigation.
 > - JavaScript interactivity.
 > - A deployment link.
 
-## Tasks
+CHECK OUT MYBLOG : https://plp-webtechnologies.github.io/feb-2025-final-project-and-deployment-Vy-Chels/blog.html
 
-Create a well-structured HTML5 document.
-Use at least 5 different HTML elements.
-Ensure semantic correctness.
 
-Good luck and happy coding! 🚀💻
+
+
