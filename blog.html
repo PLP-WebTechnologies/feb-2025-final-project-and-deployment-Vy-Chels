@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog - Blog Posts</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .blog-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .blog-post {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-post.expanded {
+            transform: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-post img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 2rem;
+        }
+
+        .blog-meta {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .blog-meta span {
+            margin-right: 1rem;
+        }
+
+        .blog-content h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .blog-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .blog-content h3 {
+            color: #2c3e50;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .blog-content ul {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .blog-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+
+        .blog-preview {
+            display: block;
+        }
+
+        .blog-full {
+            display: none;
+        }
+
+        .blog-post.expanded .blog-preview {
+            display: none;
+        }
+
+        .blog-post.expanded .blog-full {
+            display: block;
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .read-more:hover {
+            background-color: #2980b9;
+        }
+
+        .back-to-list {
+            display: none;
+            padding: 0.5rem 1rem;
+            background-color: #2c3e50;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .blog-post.expanded .back-to-list {
+            display: inline-block;
+        }
+
+        .back-to-list:hover {
+            background-color: #1a252f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>My Blog</h1>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="blog-container">
+        <article class="blog-post" data-post="web-dev">
+            <img src="Image/pexels-tranmautritam-326501.jpg" alt="Web Development">
+            <div class="blog-content">
+                <div class="blog-meta">
+                    <span><i class="far fa-calendar"></i> February 05, 2025</span>
+                    <span><i class="far fa-user"></i> Chelsea Kiboi</span>
+                    <span><i class="far fa-folder"></i> Web Development</span>
+                </div>
+                <div class="blog-preview">
+                    <h2>The Modern Landscape of Web Development in 2025</h2>
+                    <p>Web development continues to evolve at a rapid pace, shaped by new frameworks, tools, and best practices that enhance user experience, performance, and security...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                <div class="blog-full">
+                    <h2>The Modern Landscape of Web Development in 2025</h2>
+                    <p>Web development continues to evolve at a rapid pace, shaped by new frameworks, tools, and best practices that enhance user experience, performance, and security. Businesses and developers alike face an ever-changing landscape where adaptability and continuous learning are critical.</p>
+                    
+                    <h3>Key Trends Shaping Web Development Today</h3>
+                    <ul>
+                        <li><strong>Frameworks and Libraries:</strong> React, Vue.js, and Angular remain dominant, but newcomers like Svelte are gaining traction due to their simplicity and performance advantages.</li>
+                        <li><strong>Jamstack Architecture:</strong> Decoupling the front-end from the backend using static site generators and APIs leads to faster load times, improved security, and easier scalability.</li>
+                        <li><strong>Progressive Web Apps (PWAs):</strong> PWAs combine the best of web and mobile apps, offering offline capabilities, push notifications, and smooth performance, enhancing user engagement.</li>
+                        <li><strong>Serverless Computing:</strong> The rise of serverless functions allows developers to focus on writing code without worrying about server management, reducing costs and complexity.</li>
+                        <li><strong>Accessibility and Inclusivity:</strong> With growing regulatory pressures and social responsibility, making websites accessible to all users has become a priority.</li>
+                    </ul>
+
+                    <h3>Essential Skills for Web Developers</h3>
+                    <ul>
+                        <li><strong>JavaScript Mastery:</strong> A deep understanding of JavaScript, including ES6+ features, remains foundational.</li>
+                        <li><strong>Version Control with Git:</strong> Collaborative development workflows depend on Git proficiency.</li>
+                        <li><strong>Responsive Design:</strong> Ensuring websites work seamlessly across devices and screen sizes is non-negotiable.</li>
+                        <li><strong>API Integration:</strong> Knowledge of RESTful and GraphQL APIs is crucial for modern web apps.</li>
+                        <li><strong>Security Best Practices:</strong> Awareness of common vulnerabilities such as XSS and CSRF, and methods to mitigate them.</li>
+                    </ul>
+
+                    <h3>Future Outlook</h3>
+                    <p>Web development will continue embracing automation through AI-assisted coding tools, enhanced developer experience via containerization and microservices, and increasing emphasis on privacy and data protection.</p>
+                    <a href="#" class="back-to-list">Back to List</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="blog-post" data-post="tech-trends">
+            <img src="Image/pexels-tara-winstead-8386440 (1).jpg" alt="Technology Trends">
+            <div class="blog-content">
+                <div class="blog-meta">
+                    <span><i class="far fa-calendar"></i> March 10, 2025</span>
+                    <span><i class="far fa-user"></i> Chelsea Kiboi</span>
+                    <span><i class="far fa-folder"></i> Technology</span>
+                </div>
+                <div class="blog-preview">
+                    <h2>Emerging Technology Trends to Watch in 2025</h2>
+                    <p>Technology evolves faster than ever, impacting industries and daily life worldwide. Staying informed about emerging trends is essential...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                <div class="blog-full">
+                    <h2>Emerging Technology Trends to Watch in 2025</h2>
+                    <p>Technology evolves faster than ever, impacting industries and daily life worldwide. Staying informed about emerging trends is essential for businesses, developers, and enthusiasts to leverage opportunities and anticipate challenges.</p>
+
+                    <h3>Key Technology Trends</h3>
+                    <ul>
+                        <li><strong>Artificial Intelligence and Machine Learning:</strong> AI models are increasingly integrated into products for automation, personalization, and predictive analytics.</li>
+                        <li><strong>Quantum Computing Advances:</strong> Though still nascent, quantum technology promises breakthroughs in cryptography, optimization, and simulation.</li>
+                        <li><strong>5G and Beyond:</strong> Enhanced connectivity drives innovations in IoT, smart cities, and real-time applications.</li>
+                        <li><strong>Augmented Reality (AR) and Virtual Reality (VR):</strong> These immersive technologies are expanding from gaming to healthcare, education, and remote collaboration.</li>
+                        <li><strong>Sustainable Tech:</strong> Eco-friendly innovations in hardware, data centers, and software design focus on reducing carbon footprints.</li>
+                    </ul>
+
+                    <h3>Business Impact</h3>
+                    <p>Companies adopting these technologies gain competitive advantages through operational efficiency, improved customer experiences, and new revenue streams. However, integrating emerging tech requires strategic planning, skilled talent, and thoughtful risk management.</p>
+                    <a href="#" class="back-to-list">Back to List</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="blog-post" data-post="ai-industry">
+            <img src="Image/pexels-cottonbro-6153354.jpg" alt="Artificial Intelligence">
+            <div class="blog-content">
+                <div class="blog-meta">
+                    <span><i class="far fa-calendar"></i> April 5, 2025</span>
+                    <span><i class="far fa-user"></i> Chelsea Kiboi</span>
+                    <span><i class="far fa-folder"></i> Artificial Intelligence</span>
+                </div>
+                <div class="blog-preview">
+                    <h2>The Role of Artificial Intelligence in Transforming Industries</h2>
+                    <p>Artificial Intelligence (AI) is no longer a futuristic concept but a present-day reality transforming sectors across the globe...</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                <div class="blog-full">
+                    <h2>The Role of Artificial Intelligence in Transforming Industries</h2>
+                    <p>Artificial Intelligence (AI) is no longer a futuristic concept but a present-day reality transforming sectors across the globe. From automating mundane tasks to enabling complex decision-making, AI's applications are diverse and rapidly expanding.</p>
+
+                    <h3>Industry-Specific Applications</h3>
+                    <ul>
+                        <li><strong>Healthcare:</strong> AI supports diagnostics, drug discovery, personalized treatment plans, and medical imaging analysis.</li>
+                        <li><strong>Finance:</strong> Algorithms power fraud detection, credit risk assessment, and algorithmic trading.</li>
+                        <li><strong>Manufacturing:</strong> Predictive maintenance, quality control, and supply chain optimization reduce costs and downtime.</li>
+                        <li><strong>Retail:</strong> Personalized recommendations, inventory management, and chatbots enhance customer engagement.</li>
+                        <li><strong>Agriculture:</strong> AI-driven precision farming optimizes irrigation, pest control, and crop monitoring for higher yields.</li>
+                    </ul>
+
+                    <h3>Ethical and Practical Considerations</h3>
+                    <p>As AI adoption grows, ethical concerns like bias, transparency, and privacy gain prominence. Businesses must implement AI responsibly, ensuring fairness and compliance with regulations.</p>
+
+                    <h3>Future Directions</h3>
+                    <p>AI will increasingly augment human capabilities rather than replace them, fostering collaboration between humans and intelligent systems. Explainable AI and edge AI will improve trust and real-time decision-making.</p>
+                    <a href="#" class="back-to-list">Back to List</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2025 Chelsea Kiboi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Blog post expansion functionality
+        document.querySelectorAll('.blog-post').forEach(post => {
+            const readMoreBtn = post.querySelector('.read-more');
+            const backToListBtn = post.querySelector('.back-to-list');
+            
+            readMoreBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                post.classList.add('expanded');
+                // Scroll to the top of the expanded post
+                post.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+
+            backToListBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                post.classList.remove('expanded');
+                // Scroll back to the top of the blog container
+                document.querySelector('.blog-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+    </script>
+</body>
+</html> 
